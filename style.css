@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  padding: 15px 35px;
+  margin: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 0;
+  border-radius: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #aaa;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.game {
+  background: #333;
+  width: autopx;
+  padding: 30px;
+  text-align: center;
+  border-radius: 30px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.score {
+  padding-top: 20px;
+  font-size: 1.2rem;
+}
+
+.round {
+  padding-top: 5px;
+  font-size: 1rem;
+}
+
+html {
+  --s: 123px; /* control the size*/
+  --c1: #1d1d1d;
+  --c2: #4e4f51;
+  --c3: #3c3c3c;
+
+  background:
+    repeating-conic-gradient(from 30deg, #0000 0 120deg, var(--c3) 0 50%)
+      calc(var(--s) / 2) calc(var(--s) * tan(30deg) / 2),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 50%
+    );
+  background-size: var(--s) calc(var(--s) * tan(30deg));
+}
